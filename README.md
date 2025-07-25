@@ -1,69 +1,35 @@
-# React + TypeScript + Vite
+# Frontend – Administrador de Productos
+Este proyecto es el frontend de una API REST que desarrollé previamente con Express y Sequelize. Está hecho en React y permite crear, visualizar, editar y eliminar productos desde una interfaz web conectada al backend.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Tecnologías
+React – Librería principal para construir la interfaz.
+React Router DOM.
+Tailwind CSS – Framework de estilos que permite diseñar interfaces y responsivas.
+Zod – Librería para validar los datos antes de enviarlos al backend.
+Fetcher – Permite realizar acciones como eliminar sin salir de la página, mejorando la experiencia del usuario.
+Morgan – Lo usamos para registrar en consola las peticiones HTTP, cuánto tardan, el método usado y la ruta.
 
-Currently, two official plugins are available:
+## Funcion
+La aplicación muestra en su página principal una lista con todos los productos almacenados en la base de datos.
+Cuenta con un formulario donde se puede agregar un nuevo producto (nombre y precio).
+Al enviar el formulario:
+Los datos se validan con Zod, se envían mediante un action al backend usando axios, si todo sale bien, el producto se guarda y se actualiza la lista automáticamente.
+Cada producto listado tiene dos botones:
+Editar: Lleva a una vista donde se puede modificar el nombre, el precio y el estado de disponibilidad del producto.
+Eliminar: Borra el producto directamente desde la vista principal, sin necesidad de recargar.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalacion
+Clona este repositorio:
+git clone https://github.com/tuusuario/frontend-productos.git
 
-## Expanding the ESLint configuration
+Instala las dependencias:
+npm install
+Asegúrate de tener corriendo el backend.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+Inicia el servidor de desarrollo:
+npm run dev
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Requisitos
+Tener Node.js y npm instalados.
+Tener corriendo el backend.
+Conexión entre frontend y backend permitida (configurar CORS si en el backend).
