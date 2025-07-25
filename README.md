@@ -2,12 +2,12 @@
 Este proyecto es el frontend de una API REST que desarrollé previamente con Express y Sequelize. Está hecho en React y permite crear, visualizar, editar y eliminar productos desde una interfaz web conectada al backend.
 
 ## Tecnologías
-React – Librería principal para construir la interfaz.
-React Router DOM.
-Tailwind CSS – Framework de estilos que permite diseñar interfaces y responsivas.
-Zod – Librería para validar los datos antes de enviarlos al backend.
-Fetcher – Permite realizar acciones como eliminar sin salir de la página, mejorando la experiencia del usuario.
-Morgan – Lo usamos para registrar en consola las peticiones HTTP, cuánto tardan, el método usado y la ruta.
+- React – Librería principal para construir la interfaz.
+- React Router DOM.
+- Tailwind CSS – Framework de estilos que permite diseñar interfaces y responsivas.
+- Zod – Librería para validar los datos antes de enviarlos al backend.
+- Fetcher – Permite realizar acciones como eliminar sin salir de la página, mejorando la experiencia del usuario.
+- Morgan – Lo usamos para registrar en consola las peticiones HTTP, cuánto tardan, el método usado y la ruta.
 
 ## Funcion
 La aplicación muestra en su página principal una lista con todos los productos almacenados en la base de datos.
