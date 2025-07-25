@@ -20,7 +20,7 @@ Eliminar: Borra el producto directamente desde la vista principal, sin necesidad
 
 ## Instalacion
 Clona este repositorio:
-git clone https://github.com/tuusuario/frontend-productos.git
+git clone https://github.com/Hugo9591/Rest-Api-Ts-Frontend.git
 
 Instala las dependencias:
 npm install
